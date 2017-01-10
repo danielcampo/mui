@@ -7,13 +7,14 @@
 // ============================================================================
 
 // Reset box sizing
-* {
+html {
   box-sizing: border-box;
 }
 
-*:before,
-*:after {
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 // Body reset
@@ -49,16 +50,6 @@ body {
 // ============================================================================
 // TAG STYLES
 // ============================================================================
-
-// Reset fonts for relevant elements
-input,
-button,
-select,
-textarea {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
 
 // Links
 a {
