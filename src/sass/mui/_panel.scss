@@ -5,6 +5,7 @@
 .mui-panel {
   @include mui-clearfix();
 
+  box-sizing: border-box;
   padding: $mui-panel-padding;
   margin-bottom: $mui-base-line-height-computed;
   border-radius: $mui-panel-border-radius;
