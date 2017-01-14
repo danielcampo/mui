@@ -1,0 +1,104 @@
+/**
+ * MUI Globals
+ */
+
+@if $mui-include-globals == true {
+  @include normalizecss();
+
+  // Body reset
+  html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  body {
+    font-family: $mui-base-font-family;
+    font-size: $mui-base-font-size;
+    font-weight: $mui-base-font-weight;
+    line-height: $mui-base-line-height;
+    color: $mui-base-font-color;
+    background-color: $mui-body-bg-color;
+  }
+
+  // Links
+  a {
+    color: $mui-link-font-color;
+    text-decoration: $mui-link-text-decoration;
+
+    &:hover,
+    &:focus {
+      color: $mui-link-font-color-hover;
+      text-decoration: $mui-link-text-decoration-hover;
+    }
+    
+    &:focus {
+      @include mui-tab-focus();
+    }
+  }
+} else {
+  // Cherry pick from normalize.css
+
+  // remove margin in Firefox and Safari
+  button.mui-btn,
+  .mui-textfield > input,
+  .mui-textfield > textarea,
+  .mui-select > select {
+    margin: 0;
+  }
+
+  // show the overflow in Edge
+  .mui-textfield > input {
+    overflow: visible;
+  }
+
+  // remove inheritance of text transform in Firefox
+  button.mui-btn,
+  .mui-select > select {
+    text-transform: none;  
+  }
+  
+  .mui-btn {
+    // remove inner border and padding in firefox
+    &button::-moz-focus-inner,
+    &[type="button"]::-moz-focus-inner,
+    &[type="reset"]::-moz-focus-inner,
+    &[type="submit"]::-moz-focus-inner {
+      border-style: none;
+      padding: 0;
+    }
+
+    // restore focus styles unset by previous role
+    &button:-moz-focusring,
+    &[type="button"]:-moz-focusring,
+    &[type="reset"]:-moz-focusring,
+    &[type="submit"]:-moz-focusring {
+      outline: 1px dotted ButtonText;
+    }
+  }
+
+  // remove default vertical scrollbar in IE
+  .mui-textfield > textarea {
+    overflow: auto;
+  }
+
+  // add correct box sizing and padding in IE10-
+  .mui-radio,
+  .mui-checkbox {
+    input {
+      box-sizing: border-box;
+      padding: 0;
+    }
+  }
+}
+
+@if $mui-base-font-smoothing == true {
+  html,
+  body,
+  button,  // safari issue
+  input,  // safari issue
+  textarea {  // safari issue
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  }
+}
