@@ -30,7 +30,7 @@ window.addEventListener('load', function() {
 
   // change css file
   selectEl.addEventListener('change', function(ev) {
-    linkEl.href = '../assets/mui/css/' + this.value;
+    linkEl.href = '../assets/mui/css/' + this.value + '?' + (new Date());
   });
 
   document.body.appendChild(selectEl);
