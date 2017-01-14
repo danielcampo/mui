@@ -2,19 +2,41 @@
  * MUI Globals
  */
 
-// Body reset
-html {
-  font-size: 10px;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
+@if $mui-include-globals == true {
+  @include normalizecss();
 
-body {
-  font-family: $mui-base-font-family;
-  font-size: $mui-base-font-size;
-  font-weight: $mui-base-font-weight;
-  line-height: $mui-base-line-height;
-  color: $mui-base-font-color;
-  background-color: $mui-body-bg-color;
+  // Body reset
+  html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  body {
+    font-family: $mui-base-font-family;
+    font-size: $mui-base-font-size;
+    font-weight: $mui-base-font-weight;
+    line-height: $mui-base-line-height;
+    color: $mui-base-font-color;
+    background-color: $mui-body-bg-color;
+  }
+
+  // Links
+  a {
+    color: $mui-link-font-color;
+    text-decoration: $mui-link-text-decoration;
+
+    &:hover,
+    &:focus {
+      color: $mui-link-font-color-hover;
+      text-decoration: $mui-link-text-decoration-hover;
+    }
+    
+    &:focus {
+      @include mui-tab-focus();
+    }
+  }
+} else {
+  
 }
 
 @if $mui-base-font-smoothing == true {
@@ -26,21 +48,5 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
-  }
-}
-
-// Links
-a {
-  color: $mui-link-font-color;
-  text-decoration: $mui-link-text-decoration;
-
-  &:hover,
-  &:focus {
-    color: $mui-link-font-color-hover;
-    text-decoration: $mui-link-text-decoration-hover;
-  }
-
-  &:focus {
-    @include mui-tab-focus();
   }
 }
