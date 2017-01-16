@@ -1,13 +1,4 @@
 // ============================================================================
-// GLOBAL VARIABLES
-// ============================================================================
-
-$mui-include-globals: true !default;
-
-
-
-
-// ============================================================================
 // COLORS
 // ============================================================================
 
@@ -20,6 +11,32 @@ $mui-accent-color-dark:        mui-color('pink', 'A400') !default;
 $mui-accent-color-light:       mui-color('pink', 'A100') !default;
 
 $mui-danger-color:             mui-color('red', '500') !default;
+
+
+
+
+// ============================================================================
+// GLOBAL VARIABLES
+// ============================================================================
+
+$mui-include-globals:            true !default;
+
+$mui-body-bg-color:              mui-color('white') !default;
+
+$mui-base-font-color:            mui-color('black-alpha-87') !default;
+$mui-base-font-family:           Arial, Verdana, Tahoma !default;
+$mui-base-font-size:             14px !default;
+$mui-base-font-weight:           400 !default;
+$mui-base-line-height:           1.429 !default;
+$mui-base-font-smoothing:        false !default;
+
+$mui-link-font-color:            $mui-primary-color !default;
+$mui-link-text-decoration:       none !default;
+$mui-link-font-color-hover:      $mui-primary-color-dark !default;
+$mui-link-text-decoration-hover: underline !default;
+
+$mui-cursor-disabled:            not-allowed !default;
+$mui-border-radius-default:      2px !default;
 
 
 
@@ -55,36 +72,6 @@ $mui-container-sm:               570px !default;
 $mui-container-md:               740px !default;
 $mui-container-lg:               960px !default;
 $mui-container-xl:               1170px !default;
-
-
-
-
-// ============================================================================
-// SCAFFOLDING
-// ============================================================================
-
-$mui-body-bg-color:              mui-color('white') !default;
-$mui-link-font-color:            $mui-primary-color !default;
-$mui-link-text-decoration:       none !default;
-$mui-link-font-color-hover:      $mui-primary-color-dark !default;
-$mui-link-text-decoration-hover: underline !default;
-
-$mui-cursor-disabled:            not-allowed !default;
-$mui-border-radius-default:      2px !default;
-
-
-
-
-// ============================================================================
-// TYPOGRAPHY
-// ============================================================================
-
-$mui-base-font-color:     mui-color('black-alpha-87') !default;
-$mui-base-font-family:    Arial, Verdana, Tahoma !default;
-$mui-base-font-size:      14px !default;
-$mui-base-font-weight:    400 !default;
-$mui-base-line-height:    1.429 !default;
-$mui-base-font-smoothing: false !default;
 
 
 
